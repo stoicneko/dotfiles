@@ -22,6 +22,7 @@
 
     # 你可以在这里添加其他需要链接的文件或目录
     # 例如: ~/.gitconfig: git/gitconfig
+    ~/.tmux: tmux/.tmux
 
 # 可选：执行 shell 命令 (例如，安装插件管理器或插件)
 - shell:
