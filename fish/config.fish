@@ -8,7 +8,6 @@ set -gx XDG_CONFIG_HOME $HOME/.config # XDG 配置目录
 set -gx XDG_DATA_HOME $HOME/.local/share # XDG 数据目录
 set -gx XDG_CACHE_HOME $HOME/.cache # XDG 缓存目录
 set -gx PATH ~/.local/bin $PATH # 用户本地二进制目录
-set -U SXHKD_SHELL /usr/bin/bash # sxhkd 使用 bash（跨会话）
 
 # 全局函数
 function upd -d "Git pull, add all, commit with 'update', and push"
@@ -23,7 +22,7 @@ if status is-interactive
     fish_vi_key_bindings # 启用 vi 模式按键绑定
 
     # 目录导航
-    abbr jj "cd .."
+    alias jj "cd .."
     alias .. 'cd ..'
     alias .2 'cd ../..'
     alias .3 'cd ../../..'
@@ -36,16 +35,16 @@ if status is-interactive
     abbr t tmux
     abbr fa fastfetch
 
-    abbr cfish "nvim $HOME/.config/fish/config.fish"
-    abbr sfish "source $HOME/.config/fish/config.fish"
-    abbr cyazi "nvim $HOME/.config/yazi/keymap.toml"
+    alias cfish "nvim $HOME/.config/fish/config.fish"
+    alias sfish "source $HOME/.config/fish/config.fish"
+    alias cyazi "nvim $HOME/.config/yazi/keymap.toml"
 
     # alias ls exa
     # alias l "exa -l --color=auto"
     # alias ll 'eza -lha --icons=auto --sort=name --group-directories-first'
     # alias la "exa -alh --color=auto"
     alias tree "exa -T"
-    alias vf 'nvim $(fzf)'
+    alias vf "nvim $(fzf)"
 
     alias l "eza -lh --icons=auto" # long list
     alias ls "eza -1 --icons=auto" # short list
