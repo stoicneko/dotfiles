@@ -1,0 +1,33 @@
+# install.conf.yaml
+
+- defaults:
+    link:
+      relink: true # 如果链接已存在但指向错误位置，则重新创建链接
+      create: true # 如果目标路径的父目录不存在，则创建它们
+
+- clean: ['~', '~/.config'] # 清理由 Dotbot 在家目录和 .config 目录下创建的无效链接
+
+- link:
+    # 将 ~/dotfiles/nvim 链接到 ~/.config/nvim
+    ~/.config/nvim: nvim
+
+    # 将 ~/dotfiles/yazi 链接到 ~/.config/yazi
+    ~/.config/yazi: yazi
+
+    # 将 ~/dotfiles/fish 链接到 ~/.config/fish
+    ~/.config/fish: fish
+
+    # 将 ~/dotfiles/tmux/tmux.conf 链接到 ~/.tmux.conf
+    ~/.tmux.conf: tmux/tmux.conf
+
+    # 你可以在这里添加其他需要链接的文件或目录
+    # 例如: ~/.gitconfig: git/gitconfig
+
+# 可选：执行 shell 命令 (例如，安装插件管理器或插件)
+# - shell:
+#   - command: git submodule update --init --recursive # 初始化 Git 子模块 (如果有的话)
+#     description: Updating Git submodules
+#   - command: 'nvim --headless "+Lazy! sync" +qa' # 如果使用 LazyVim/Lazy.nvim，同步插件
+#     description: Syncing Neovim plugins (Lazy.nvim)
+#     stdout: true # 显示命令输出
+#     stderr: true # 显示错误输出
