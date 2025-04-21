@@ -4,7 +4,7 @@ set -g fish_greeting
 set -U SXHKD_SHELL /usr/bin/bash
 set -gx EDITOR nvim
 set -gx LANG en_US.UTF-8
-set -gx XDG_CONFIG_HOME "/home/zhaole_ar/.config/"
+set -gx XDG_CONFIG_HOME "~/.config/"
 
 ### ---zoxide--- ###
 function j
