@@ -29,22 +29,25 @@ if status is-interactive
     alias .4 'cd ../../../..'
     alias .5 'cd ../../../../..'
     # 编辑器和配置文件
-    abbr vi nvim
-    abbr nv nvim
-    abbr v nvim
-    abbr t tmux
-    abbr fa fastfetch
+    alias vi nvim
+    alias v nvim
+    alias t tmux
+    alias fa fastfetch
+
+    function nv
+        nohup neovide.exe --wsl &
+    end
 
     alias cfish "nvim $HOME/.config/fish/config.fish"
     alias sfish "source $HOME/.config/fish/config.fish"
     alias cyazi "nvim $HOME/.config/yazi/keymap.toml"
 
-    # alias ls exa
-    # alias l "exa -l --color=auto"
-    # alias ll 'eza -lha --icons=auto --sort=name --group-directories-first'
-    # alias la "exa -alh --color=auto"
     alias tree "exa -T"
+
     # alias vf "nvim $(fzf)"
+    function vf
+        nvim $(fzf)
+    end
 
     alias l "eza -lh --icons=auto" # long list
     alias ls "eza -1 --icons=auto" # short list
