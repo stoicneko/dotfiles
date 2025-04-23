@@ -5,10 +5,10 @@ return {
   -- config = function()
   --   vim.cmd([[ colorscheme NeoSolarized ]])
   -- end,
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
-  },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "catppuccin",
+  --   },
+  -- },
 }
