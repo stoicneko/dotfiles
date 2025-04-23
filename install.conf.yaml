@@ -24,11 +24,13 @@
     # 例如: ~/.gitconfig: git/gitconfig
     ~/.tmux: tmux/.tmux
 
+    ~/.config/fastfetch: fastfetch
+
 # 可选：执行 shell 命令 (例如，安装插件管理器或插件)
 - shell:
   - command: git submodule update --init --recursive # 初始化 Git 子模块 (如果有的话)
     description: Updating Git submodules
-  - command: 'nvim --headless "+Lazy! sync" +qa' # 如果使用 LazyVim/Lazy.nvim，同步插件
-    description: Syncing Neovim plugins (Lazy.nvim)
+  # - command: 'nvim --headless "+Lazy! sync" +qa' # 如果使用 LazyVim/Lazy.nvim，同步插件
+  #   description: Syncing Neovim plugins (Lazy.nvim)
     stdout: true # 显示命令输出
     stderr: true # 显示错误输出
