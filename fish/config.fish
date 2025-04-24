@@ -34,16 +34,16 @@ if status is-interactive
     alias t tmux
     alias fa fastfetch
 
-    function nv
-        nohup neovide.exe --wsl &
-    end
-
     alias cfish "nvim $HOME/.config/fish/config.fish"
     alias sfish "source $HOME/.config/fish/config.fish"
     alias cyazi "nvim $HOME/.config/yazi/keymap.toml"
 
     alias tree "exa -T"
 
+    # neovide config
+    function nv
+        nohup neovide.exe --wsl &
+    end
     # alias vf "nvim $(fzf)"
     function vf
         nvim $(fzf)
@@ -56,6 +56,7 @@ if status is-interactive
     alias lt "eza --icons=auto --tree" # list folder as tree
     # 终端操作
     abbr :q exit
+    abbr b btop
 
     # Git 相关
     abbr gcl "git clone"
@@ -77,6 +78,10 @@ if status is-interactive
     # 外部工具初始化
     zoxide init fish | source
     starship init fish | source
+
+    # 打开fish默认启用tmux
+    # and not set -q TMUX
+    # tmux attach-session -t main; or tmux new-session -s main
 end
 
 # 自定义函数
