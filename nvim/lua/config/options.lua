@@ -9,9 +9,9 @@ vim.g.maplocalleader = " "
 vim.g.mapleader = " "
 
 -- 拼写检查
-vim.opt.spell = true
-vim.opt.spelllang = { "en", "cjk" }
-vim.opt.spelloptions = "camel"
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { "en", "cjk" }
+-- vim.opt.spelloptions = "camel"
 
 local indent = 2
 -- vim.opt.expandtab = true -- Use spaces instead of tabs

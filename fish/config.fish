@@ -42,7 +42,7 @@ if status is-interactive
 
     # neovide config
     function nv
-        nohup neovide.exe --wsl &
+        nohup neovide.exe &
     end
     # alias vf "nvim $(fzf)"
     function vf
