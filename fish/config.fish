@@ -40,10 +40,13 @@ if status is-interactive
 
     alias tree "exa -T"
 
+    # 适用于linux/mac, 退出终端仍能neovide不退出
     # neovide config
-    function nv
-        nohup neovide.exe &
-    end
+    # function nv
+    #     nohup neovide.exe &
+    # end
+    alias nv 'neovide.exe'
+
     # alias vf "nvim $(fzf)"
     function vf
         nvim $(fzf)

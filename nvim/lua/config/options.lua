@@ -8,6 +8,16 @@ vim.opt.backup = false
 vim.g.maplocalleader = " "
 vim.g.mapleader = " "
 
+-- neovide 标题栏颜色
+vim.g.neovide_title_background_color =
+  string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name("Normal") }).bg)
+
+-- 窗口左上角 字体颜色
+vim.g.neovide_title_text_color = "pink"
+
+-- 使用上一会话的窗口大小
+vim.g.neovide_remember_window_size = true
+
 -- 拼写检查
 -- vim.opt.spell = true
 -- vim.opt.spelllang = { "en", "cjk" }
