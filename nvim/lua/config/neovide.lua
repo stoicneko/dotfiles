@@ -17,7 +17,8 @@ vim.g.terminal_color_14 = "#94e2d5"
 vim.g.terminal_color_15 = "#a6adc8"
 
 -- font
-vim.o.guifont = "DejaVuSansM Nerd Font Mono:h12"
+-- vim.o.guifont = "DejaVuSansM Nerd Font Mono:h12"
+vim.o.guifont = "Maple Mono NF CN:h12"
 
 -- ui
 vim.g.neovide_cursor_vfx_mode = "pixiedust"

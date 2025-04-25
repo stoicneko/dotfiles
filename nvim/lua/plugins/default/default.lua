@@ -37,14 +37,6 @@ return {
     },
   },
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    opts = {
-      flavour = "Mocha",
-      transparent_background = true,
-    },
-  },
-  {
     "echasnovski/mini.ai",
     -- enabled = false,
     opts = function()
