@@ -5,7 +5,7 @@ return {
       "hrsh7th/cmp-emoji",
     },
     opts = function(_, opts)
-      local luasnip = require("luasnip")
+      -- local luasnip = require("luasnip")
       local cmp = require("cmp")
       local compare = cmp.config.compare
       local auto_select = true

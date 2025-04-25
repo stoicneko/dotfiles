@@ -27,11 +27,11 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- reload colorscheme for matugen
-vim.api.nvim_create_autocmd("Signal", {
-  pattern = "SIGUSR1",
-  callback = function()
-    vim.cmd("Lazy reload catppuccin")
-    vim.cmd("Lazy reload lualine.nvim")
-    vim.cmd("Lazy reload bufferline.nvim")
-  end,
-})
+-- vim.api.nvim_create_autocmd("Signal", {
+--   pattern = "SIGUSR1",
+--   callback = function()
+--     vim.cmd("Lazy reload catppuccin")
+--     vim.cmd("Lazy reload lualine.nvim")
+--     vim.cmd("Lazy reload bufferline.nvim")
+--   end,
+-- })
