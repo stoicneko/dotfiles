@@ -8,6 +8,9 @@ set -gx XDG_CONFIG_HOME $HOME/.config # XDG 配置目录
 set -gx XDG_DATA_HOME $HOME/.local/share # XDG 数据目录
 set -gx XDG_CACHE_HOME $HOME/.cache # XDG 缓存目录
 set -gx PATH ~/.local/bin $PATH # 用户本地二进制目录
+# JAVA
+# set -gx JAVA_HOME /usr/lib/jvm/java-24-jdk
+# set -gx PATH $JAVA_HOME/bin $PATH
 
 # 全局函数
 function upd -d "Git pull, add all, commit with 'update', and push"
