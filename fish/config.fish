@@ -12,6 +12,8 @@ set -gx PATH ~/.local/bin $PATH # 用户本地二进制目录
 # set -gx JAVA_HOME /usr/lib/jvm/java-24-jdk
 # set -gx PATH $JAVA_HOME/bin $PATH
 
+set -gx aurhelper paru
+
 # 全局函数
 function upd -d "Git pull, add all, commit with 'update', and push"
     git pull
@@ -63,6 +65,14 @@ if status is-interactive
     # 终端操作
     abbr :q exit
     abbr b btop
+
+    alias un "$aurhelper -Rns" # uninstall package
+    alias up "$aurhelper -Syu" # update system/package/aur
+    alias pf "$aurhelper -Qs" # list installed package
+    alias ps "$aurhelper -Ss" # search available package
+    alias pi "$aurhelper -S" # install package
+    alias pc "$aurhelper -Sc" # remove unused cache
+    alias po "$aurhelper -Qtdq | $aurhelper -Rns -" # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 
     # Git 相关
     abbr gcl "git clone"
