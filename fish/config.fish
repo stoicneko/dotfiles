@@ -65,6 +65,7 @@ if status is-interactive
     # 终端操作
     abbr :q exit
     abbr b btop
+    abbr c clear
 
     alias un "$aurhelper -Rns" # uninstall package
     alias up "$aurhelper -Syu" # update system/package/aur
