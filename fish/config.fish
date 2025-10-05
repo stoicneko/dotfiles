@@ -26,7 +26,6 @@ end
 if status is-interactive
     fish_vi_key_bindings # 启用 vi 模式按键绑定
 
-    # 目录导航
     alias jj "cd .."
     alias .. 'cd ..'
     alias .2 'cd ../..'
