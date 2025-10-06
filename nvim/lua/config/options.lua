@@ -19,9 +19,9 @@ vim.g.neovide_title_text_color = "pink"
 vim.g.neovide_remember_window_size = true
 
 -- 拼写检查
-vim.opt.spell = true
-vim.opt.spelllang = { "en", "cjk" }
-vim.opt.spelloptions = "camel"
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { "en", "cjk" }
+-- vim.opt.spelloptions = "camel"
 
 local indent = 2
 -- vim.opt.expandtab = true -- Use spaces instead of tabs
