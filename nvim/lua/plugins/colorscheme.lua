@@ -1,7 +1,8 @@
 return {
   {
     "Tsuzat/NeoSolarized.nvim",
-    lazy = true,
+    lazy = false,
+    priortity = 1000,
     -- opts = {
     --   style = "light",
     --   transparent = false,
