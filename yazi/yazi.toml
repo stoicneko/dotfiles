@@ -9,9 +9,7 @@ max_width = 1000
 max_height = 2000
 
 [opener]
-edit = [ 
-  { run = 'nvim "$@"', desc = "nvim", block = true, for = "unix" },
-]
+edit = [{ run = 'nvim "$@"', desc = "nvim", block = true, for = "unix" }]
 zathura = [
   { run = 'nohup zathura "$@" > /dev/null 2>&1 &', desc = "zathura", orphan = true, for = "linux" },
 ]
@@ -24,8 +22,14 @@ inkscape = [
 
 [open]
 prepend_rules = [
-  { name = "*.pdf", use = ["sioyek", "zathura"] },
+  { name = "*.pdf", use = [
+    "sioyek",
+    "zathura",
+  ] },
   { name = "*.tex", use = "edit" },
   { name = "*.svg", use = "inkscape" },
-  { mime = "image/*", use = ["qimgv", "reveal"] },
+  { mime = "image/*", use = [
+    "qimgv",
+    "reveal",
+  ] },
 ]
