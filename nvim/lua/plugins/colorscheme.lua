@@ -5,7 +5,7 @@ return {
     priortity = 1000,
     -- opts = {
     --   style = "light",
-    --   transparent = false,
+    transparent = true,
     -- },
   },
 
