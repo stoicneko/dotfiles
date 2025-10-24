@@ -2,7 +2,6 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     enabled = false,
-    lazy = true,
     opts = {
       filesystem = {
         window = {
@@ -13,8 +12,26 @@ return {
         commands = {
           system_open = function(state)
             local node = state.tree:get_node()
-            local path = node:get_id()
-            vim.api.nvim_command("silent !open -g " .. path)
+            local path = node and node:get_id()
+            if not path then
+              return
+            end
+            local opened = false
+
+            if vim.ui.open then
+              opened = pcall(vim.ui.open, path)
+            end
+
+            if opened then
+              return
+            end
+
+            local ok, Util = pcall(require, "lazyvim.util")
+            if ok and Util.open then
+              Util.open(path)
+            else
+              vim.notify(string.format("Opening %s failed", path), vim.log.levels.WARN)
+            end
           end,
         },
       },
@@ -31,14 +48,20 @@ return {
       {
         "<leader>e",
         function()
-          require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
+          local current = vim.api.nvim_buf_get_name(0)
+          if current == "" then
+            local uv = vim.uv or vim.loop
+            current = uv.cwd()
+          end
+          require("mini.files").open(current, true)
         end,
         desc = "Open mini.files (Directory of Current File)",
       },
       {
         "<leader>E",
         function()
-          require("mini.files").open(vim.uv.cwd(), true)
+          local uv = vim.uv or vim.loop
+          require("mini.files").open(uv.cwd(), true)
         end,
         desc = "Open mini.files (cwd)",
       },

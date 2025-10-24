@@ -3,42 +3,44 @@
 -- Add any additional options here
 
 vim.lsp.set_log_level("off")
-vim.opt.timeoutlen = 150
-vim.opt.backup = false
-vim.g.maplocalleader = " "
-vim.g.mapleader = " "
 
--- neovide 标题栏颜色
-vim.g.neovide_title_background_color =
-  string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name("Normal") }).bg)
+local g = vim.g
+local opt = vim.opt
 
--- 窗口左上角 字体颜色
-vim.g.neovide_title_text_color = "pink"
+g.mapleader = " "
+g.maplocalleader = " "
 
--- 使用上一会话的窗口大小
-vim.g.neovide_remember_window_size = true
-
--- 拼写检查
--- vim.opt.spell = true
--- vim.opt.spelllang = { "en", "cjk" }
--- vim.opt.spelloptions = "camel"
+opt.timeoutlen = 150
+opt.backup = false
 
 local indent = 2
--- vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.softtabstop = indent -- Number of spaces that a <Tab> counts for while performing editing operations
-vim.opt.tabstop = indent -- Number of spaces tabs count for
-vim.opt.shiftwidth = indent -- Size of an indent
+-- opt.expandtab = true -- Use spaces instead of tabs
+opt.tabstop = indent
+opt.shiftwidth = indent
+opt.softtabstop = indent
 
 vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
+  opt.clipboard = "unnamedplus"
 end)
 
--- 启用行折叠
-vim.opt.wrap = true
-vim.opt.linebreak = true -- 在单词边界折行
-vim.opt.breakindent = true -- 折行保持缩进
-vim.opt.showbreak = "↳ " -- 折行处显示符号（可选）
+-- Wrap and indent visualization
+opt.wrap = true
+opt.linebreak = true
+opt.breakindent = true
+opt.showbreak = "↳ "
 
-if vim.g.neovide then
+-- opt.spell = true
+-- opt.spelllang = { "en", "cjk" }
+-- opt.spelloptions = "camel"
+
+if g.neovide then
+  local ok, normal = pcall(vim.api.nvim_get_hl, 0, { name = "Normal", link = false })
+  if ok then
+    local bg = normal.bg or 0
+    g.neovide_title_background_color = string.format("%x", bg)
+  end
+  g.neovide_title_text_color = "pink"
+  g.neovide_remember_window_size = true
+
   require("config.neovide")
 end
