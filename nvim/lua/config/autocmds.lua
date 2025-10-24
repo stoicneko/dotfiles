@@ -7,23 +7,26 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
--- Don't auto commenting new lines
 autocmd("BufEnter", {
-  pattern = "",
-  command = "set fo-=c fo-=r fo-=o",
+  group = augroup("custom_formatoptions", { clear = true }),
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+  end,
+  desc = "Don't auto comment new lines",
 })
--- close some filetypes with <q>
-vim.api.nvim_create_autocmd("FileType", {
-  group = vim.api.nvim_create_augroup("close_with_q", { clear = true }),
-  pattern = {
-    "terminal",
-  },
+
+autocmd("FileType", {
+  group = augroup("close_with_q", { clear = true }),
+  pattern = { "terminal" },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
     vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
   end,
+  desc = "Close window with q",
 })
 
 -- reload colorscheme for matugen

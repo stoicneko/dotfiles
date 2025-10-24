@@ -1,61 +1,49 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = function()
-      return {
-        highlight = {
-          enable = true,
-          disable = { "latex" },
-          -- additional_vim_regex_highlighting = { "markdown" },
-        },
-        -- ignore_install = { "latex" },
-        indent = { enable = true, disable = { "python" } },
-        context_commentstring = { enable = true, enable_autocmd = false },
-        ensure_installed = {
-          "latex",
-          "bash",
-          "c",
-          "cpp",
-          "html",
-          "json",
-          "lua",
-          "luap",
-          "markdown",
-          "make",
-          "markdown_inline",
-          "scala",
-          "python",
-          "query",
-          "toml",
-          "regex",
-          "vim",
-          "yaml",
-        },
-        incremental_selection = {
-          enable = true,
-          keymaps = {
-            init_selection = "<cr>",
-            node_incremental = "<cr>",
-            scope_incremental = "\\",
-            node_decremental = "<bs>",
-          },
-        },
-      }
-    end,
-    rainbow = {
-      enable = true,
-      -- list of languages you want to disable the plugin for
-      disable = { "jsx", "cpp" },
-      -- Which query to use for finding delimiters
-      query = "rainbow-parens",
-      -- Highlight the entire buffer all at once
-    },
+    opts = function(_, opts)
+      opts.highlight = opts.highlight or {}
+      opts.highlight.enable = true
+      opts.highlight.disable = { "latex" }
 
-    keys = function()
-      return {
-        { "<cr>", desc = "Increment selection" },
-        { "<bs>", desc = "Decrement selection", mode = "x" },
+      opts.indent = opts.indent or {}
+      opts.indent.enable = true
+      opts.indent.disable = { "python" }
+
+      opts.context_commentstring = { enable = true, enable_autocmd = false }
+
+      opts.ensure_installed = {
+        "bash",
+        "c",
+        "cpp",
+        "html",
+        "json",
+        "latex",
+        "lua",
+        "luap",
+        "make",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "scala",
+        "toml",
+        "vim",
+        "yaml",
       }
+
+      opts.incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<cr>",
+          node_incremental = "<cr>",
+          scope_incremental = "\\",
+          node_decremental = "<bs>",
+        },
+      }
+
+      return opts
     end,
   },
 }

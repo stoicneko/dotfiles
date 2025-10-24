@@ -1,34 +1,37 @@
+local g = vim.g
+local o = vim.o
+local map = vim.keymap.set
+
 -- NeoSolarized 终端颜色
-vim.g.terminal_color_0 = "#002b36" -- 黑（背景）
-vim.g.terminal_color_1 = "#dc322f" -- 红
-vim.g.terminal_color_2 = "#859900" -- 绿
-vim.g.terminal_color_3 = "#b58900" -- 黄
-vim.g.terminal_color_4 = "#268bd2" -- 蓝
-vim.g.terminal_color_5 = "#d33682" -- 洋红
-vim.g.terminal_color_6 = "#2aa198" -- 青
-vim.g.terminal_color_7 = "#eee8d5" -- 白（前景）
-vim.g.terminal_color_8 = "#073642" -- 亮黑
-vim.g.terminal_color_9 = "#cb4b16" -- 亮红
-vim.g.terminal_color_10 = "#586e75" -- 亮绿
-vim.g.terminal_color_11 = "#657b83" -- 亮黄
-vim.g.terminal_color_12 = "#839496" -- 亮蓝
-vim.g.terminal_color_13 = "#6c71c4" -- 亮洋红
-vim.g.terminal_color_14 = "#93a1a1" -- 亮青
-vim.g.terminal_color_15 = "#fdf6e3" -- 亮白
+g.terminal_color_0 = "#002b36" -- 黑（背景）
+g.terminal_color_1 = "#dc322f" -- 红
+g.terminal_color_2 = "#859900" -- 绿
+g.terminal_color_3 = "#b58900" -- 黄
+g.terminal_color_4 = "#268bd2" -- 蓝
+g.terminal_color_5 = "#d33682" -- 洋红
+g.terminal_color_6 = "#2aa198" -- 青
+g.terminal_color_7 = "#eee8d5" -- 白（前景）
+g.terminal_color_8 = "#073642" -- 亮黑
+g.terminal_color_9 = "#cb4b16" -- 亮红
+g.terminal_color_10 = "#586e75" -- 亮绿
+g.terminal_color_11 = "#657b83" -- 亮黄
+g.terminal_color_12 = "#839496" -- 亮蓝
+g.terminal_color_13 = "#6c71c4" -- 亮洋红
+g.terminal_color_14 = "#93a1a1" -- 亮青
+g.terminal_color_15 = "#fdf6e3" -- 亮白
 
 -- font
--- vim.o.guifont = "DejaVuSansM Nerd Font Mono:h12"
-vim.o.guifont = "Maple Mono NF CN:h12"
+-- o.guifont = "DejaVuSansM Nerd Font Mono:h12"
+o.guifont = "Maple Mono NF CN:h12"
 
--- 强制每帧重绘
-vim.g.neovide_no_idle = true
 -- ui
-vim.g.neovide_cursor_vfx_mode = "pixiedust"
--- vim.g.neovide_transparency = 0
-vim.g.neovide_normal_opacity = 0.6
+g.neovide_no_idle = true -- 强制每帧重绘
+g.neovide_cursor_vfx_mode = "pixiedust"
+-- g.neovide_transparency = 0
+g.neovide_normal_opacity = 0.6
 
 -- keymaps
-vim.keymap.set({ "i", "t" }, "<a-v>", "<esc>pa")
+map({ "i", "t" }, "<a-v>", "<esc>pa")
 
 -- -- fix neovide terminal color(catppuccin)
 -- vim.g.terminal_color_0 = "#45475a"
