@@ -14,19 +14,27 @@
     # 将 ~/dotfiles/yazi 链接到 ~/.config/yazi
     ~/.config/yazi: yazi
 
-    # 将 ~/dotfiles/fish 链接到 ~/.config/fish
-    ~/.config/fish: fish
+    # Fish 采用 modules 结构，分别链接 config/conf.d/functions 等
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/conf.d: fish/conf.d
+    ~/.config/fish/functions: fish/functions
+    ~/.config/fish/completions: fish/completions
+    ~/.config/fish/themes: fish/themes
+    ~/.config/fish/fish_plugins: fish/fish_plugins
+    ~/.config/fish/fish_variables: fish/fish_variables
 
     # 将 ~/dotfiles/tmux/tmux.conf 链接到 ~/.tmux.conf
     ~/.tmux.conf: tmux/tmux.conf
 
-    # 你可以在这里添加其他需要链接的文件或目录
-    # 例如: ~/.gitconfig: git/gitconfig
+    # tmux 现在使用 ~/.tmux/conf.d 结构，整个目录保持同步
     ~/.tmux: tmux/.tmux
 
     ~/.config/fastfetch: fastfetch
 
     ~/.config/btop: btop
+
+    # 你可以在这里添加其他需要链接的文件或目录
+    # 例如: ~/.gitconfig: git/gitconfig
 # 可选：执行 shell 命令 (例如，安装插件管理器或插件)
 - shell:
   - command: git submodule update --init --recursive # 初始化 Git 子模块 (如果有的话)
