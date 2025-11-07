@@ -24,11 +24,3 @@ alias ls 'eza -1 --icons=auto'
 alias ll 'eza -lha --icons=auto --sort=name --group-directories-first'
 alias ld 'eza -lhD --icons=auto'
 alias lt 'eza --icons=auto --tree'
-
-alias un "$aurhelper -Rns"
-alias up "$aurhelper -Syu"
-alias pf "$aurhelper -Qs"
-alias ps "$aurhelper -Ss"
-alias pi "$aurhelper -S"
-alias pc "$aurhelper -Sc"
-alias po "$aurhelper -Qtdq | $aurhelper -Rns -"
