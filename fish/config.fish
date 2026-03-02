@@ -6,3 +6,4 @@
 # if status is-interactive; and not set -q TMUX
 #     tmux new-session -As main
 # end
+set -gx GITHUB_PERSONAL_ACCESS_TOKEN REDACTED
