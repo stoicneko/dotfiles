@@ -6,4 +6,5 @@
 # if status is-interactive; and not set -q TMUX
 #     tmux new-session -As main
 # end
-set -gx GITHUB_PERSONAL_ACCESS_TOKEN REDACTED
+# Use `set -gx GITHUB_PERSONAL_ACCESS_TOKEN <token>` in a file outside this repo,
+# e.g. ~/.config/fish/conf.d/99-secrets.fish (not tracked by git).
