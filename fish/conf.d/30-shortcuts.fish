@@ -16,7 +16,7 @@ alias fa fastfetch
 alias nv 'neovide.exe'
 
 # Config shortcuts
-alias cfish "nvim $HOME/.config/fish/config.fish"
+alias cfish "nvim $HOME/.config/fish/conf.d/30-shortcuts.fish"
 alias sfish "source $HOME/.config/fish/config.fish"
 alias cyazi "nvim $HOME/.config/yazi/keymap.toml"
 
