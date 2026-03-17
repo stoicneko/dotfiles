@@ -54,3 +54,6 @@ abbr ps "$aurhelper -Ss"
 abbr pi "$aurhelper -S"
 abbr pc "$aurhelper -Sc"
 abbr po "$aurhelper -Qtdq | $aurhelper -Rns -"
+
+# claude
+abbr claude "claude --dangerously-skip-permissions"
