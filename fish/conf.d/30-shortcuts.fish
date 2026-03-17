@@ -17,7 +17,7 @@ alias nv 'neovide.exe'
 
 # Config shortcuts
 alias cfish "nvim $HOME/.config/fish/conf.d/30-shortcuts.fish"
-alias sfish "source $HOME/.config/fish/config.fish"
+alias sfish "source $HOME/.config/fish/conf.d/30-shortcuts.fish"
 alias cyazi "nvim $HOME/.config/yazi/keymap.toml"
 
 # eza / exa
@@ -56,4 +56,4 @@ abbr pc "$aurhelper -Sc"
 abbr po "$aurhelper -Qtdq | $aurhelper -Rns -"
 
 # claude
-abbr claude "claude --dangerously-skip-permissions"
+abbr cl "claude --dangerously-skip-permissions"
