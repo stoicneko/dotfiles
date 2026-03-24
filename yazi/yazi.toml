@@ -10,7 +10,7 @@ max_height = 2000
 
 [opener]
 edit = [{ run = 'nvim "$@"', desc = "nvim", block = true, for = "unix" }]
-open = [{ run = 'wslview "$@"', desc = "open", orphan = true, for = "linux" }]
+open = [{ run = 'cmd.exe /c start "" "$@"', desc = "open", orphan = true, for = "linux" }]
 
 [open]
 prepend_rules = [
