@@ -57,6 +57,3 @@ abbr po "$aurhelper -Qtdq | $aurhelper -Rns -"
 
 # claude
 abbr cl "claude --dangerously-skip-permissions"
-
-# expoloer.exe
-abbr op "explorer.exe ."
