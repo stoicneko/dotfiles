@@ -1,3 +1,5 @@
+status is-interactive; or exit
+
 set -gx ALL_PROXY "http://localhost:7890"
 set -gx HTTP_PROXY $ALL_PROXY
 set -gx HTTPS_PROXY $ALL_PROXY

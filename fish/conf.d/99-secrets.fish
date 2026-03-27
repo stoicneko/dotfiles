@@ -2,5 +2,7 @@ status is-interactive; or exit
 
 set -gx GITHUB_PERSONAL_ACCESS_TOKEN (gh auth token)
 
-set -gx TWITTER_AUTH_TOKEN "cf6588cda886b8ad204765eb159d4676eeab3c3e"
-set -gx TWITTER_CT0 "85db0cd1157c929b96d5039bef53cce3e77cb67b1523d7d34e32f225ade867a80c940db01415677d8633596050b0d1479b016106a82aa372e6f25d645d6eb5b97a2141ecca9ff9ff74f1290da97de54a"
+# Source local secrets file (not tracked by git)
+if test -f ~/.config/fish/secrets.fish
+    source ~/.config/fish/secrets.fish
+end

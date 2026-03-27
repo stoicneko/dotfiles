@@ -6,9 +6,9 @@
     "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | shuf -n 1)",
     "height": 9,
     "padding": {
-    "top": 1,
-    "right": 1,
-    },
+      "top": 1,
+      "right": 1
+    }
   },
   // "logo": {
   //   "source": "~/Pictures/face.jpg",
@@ -19,46 +19,46 @@
   //   },
   // },
   "display": {
-    "separator": "",
+    "separator": ""
   },
   "modules": [
     "break",
     {
       "type": "os",
       "key": "  OS ~ ",
-      "keyColor": "32",
+      "keyColor": "32"
     },
     {
       "type": "kernel",
       "key": "  KR ~ ",
-      "keyColor": "32",
+      "keyColor": "32"
     },
     {
       "type": "shell",
       "key": "  SH ~ ",
-      "keyColor": "32",
+      "keyColor": "32"
     },
     {
       "type": "terminal",
       "key": "  TM ~ ",
-      "keyColor": "32",
+      "keyColor": "32"
     },
     {
       "type": "wm",
       "key": "  WM ~ ",
-      "keyColor": "32",
+      "keyColor": "32"
     },
     "break",
     {
       "type": "custom",
-      "format": "  \u001b[90m \u001b[31m \u001b[32m \u001b[33m \u001b[34m \u001b[35m \u001b[36m \u001b[37m",
+      "format": "  \u001b[90m \u001b[31m \u001b[32m \u001b[33m \u001b[34m \u001b[35m \u001b[36m \u001b[37m"
     },
     "break",
     {
       "type": "command",
       "key": "  ʕ•́ᴥ•̀ʔっ♡ ",
       "keyColor": "35",
-      "text": "echo welcome to $(hostname), \u001b[35m$(whoami)",
-    },
-  ],
+      "text": "echo welcome to $(hostname), \u001b[35m$(whoami)"
+    }
+  ]
 }
