@@ -8,3 +8,5 @@
 # end
 # Use `set -gx GITHUB_PERSONAL_ACCESS_TOKEN <token>` in a file outside this repo,
 # e.g. ~/.config/fish/conf.d/99-secrets.fish (not tracked by git).
+
+kubectl completion fish | source
