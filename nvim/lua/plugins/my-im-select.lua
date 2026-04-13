@@ -1,6 +1,7 @@
 return {
   {
     "stoicneko/my-im-select.nvim",
+    enabled = false,
     event = "VeryLazy",
     opts = {
       im_select_path = "/mnt/d/Tools/im-select.exe",
