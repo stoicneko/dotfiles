@@ -14,8 +14,8 @@ open = [{ run = 'cmd.exe /c start "" "$(wslpath -w "$1")" 2>/dev/null', desc = "
 
 [open]
 prepend_rules = [
-  { name = "*.pdf", use = "open" },
-  { name = "*.tex", use = "edit" },
-  { name = "*.svg", use = "open" },
+  { url = "*.pdf", use = "open" },
+  { url = "*.tex", use = "edit" },
+  { url = "*.svg", use = "open" },
   { mime = "image/*", use = "open" },
 ]
