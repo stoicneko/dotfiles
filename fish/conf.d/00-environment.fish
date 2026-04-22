@@ -9,5 +9,3 @@ set -q XDG_CACHE_HOME; or set -gx XDG_CACHE_HOME "$HOME/.cache"
 
 set -gx aurhelper paru
 set -gx PATH $PATH ~/go/bin
-
-set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1
