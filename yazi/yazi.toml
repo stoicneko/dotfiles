@@ -9,8 +9,8 @@ max_width = 1000
 max_height = 2000
 
 [opener]
-edit = [{ run = 'nvim "$@"', desc = "nvim", block = true, for = "unix" }]
-open = [{ run = 'cmd.exe /c start "" "$(wslpath -w "$1")" 2>/dev/null', desc = "open", orphan = true, for = "linux" }]
+edit = [{ run = 'nvim %s', desc = "nvim", block = true, for = "unix" }]
+open = [{ run = 'cmd.exe /c start "" "$(wslpath -w %s1)" 2>/dev/null', desc = "open", orphan = true, for = "linux" }]
 
 [open]
 prepend_rules = [
