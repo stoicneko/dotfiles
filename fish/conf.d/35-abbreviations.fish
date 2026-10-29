@@ -23,9 +23,9 @@ abbr un "$aurhelper -Rns"
 abbr up "$aurhelper -Syu"
 abbr pf "$aurhelper -Qs"
 abbr ps "$aurhelper -Ss"
-abbr pi "$aurhelper -S"
+abbr in "$aurhelper -S"
 abbr pc "$aurhelper -Sc"
 abbr po "$aurhelper -Qtdq | $aurhelper -Rns -"
 
 # Claude
-abbr cl "claude --dangerously-skip-permissions"
+abbr cl "claude --dangerously-skip-permissions "
